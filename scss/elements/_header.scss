@@ -1,0 +1,183 @@
+.header
+{
+    $header-height   : $pixels-120;
+    height           : $header-height;
+    width            : 100%;
+    min-width        : 300px;
+    background-color : $color-black;
+
+    &__container
+    {
+        height          : inherit;
+        display         : flex;
+        align-items     : center;
+        justify-content : space-between;
+        padding         : 0 $pixels-16;
+
+    }
+
+    .logo
+    {
+        text-transform : uppercase;
+        margin-left    : $pixels-10;
+
+        span
+        {
+            color : $color-red;
+        }
+    }
+
+    .nav
+    {
+        &__btn
+        {
+            opacity  : 0;
+            position : absolute;
+            display  : none;
+            left     : -99999px;
+            top      : -99999px;
+        }
+
+        &__switch
+        {
+            display       : block;
+            border        : $pixels-2 solid $color-white;
+            padding       : $pixels-8;
+            border-radius : 25%;
+
+            min-height    : 60px;
+            @include for-tablet-landscape-up
+            {
+                display : none;
+            }
+
+            span
+            {
+                display          : block;
+                background-color : $color-red;
+                height           : $pixels-8;
+                width            : $pixels-64;
+                margin-bottom    : $pixels-8;
+
+                &:last-child
+                {
+                    margin-bottom : 0;
+                }
+
+                @include for-tablet-landscape-up
+                {
+                    display : flex;
+                }
+            }
+        }
+
+        &__list
+        {
+            display          : none;
+            background-color : $color-yellow-green;
+            position         : absolute;
+            top              : $header-height;
+            right            : 0;
+            width            : 100vw;
+            text-align       : right;
+
+            @include for-tablet-landscape-up
+            {
+                display          : flex;
+                position         : static;
+                width            : auto;
+                background-color : inherit;
+                text-align       : center;
+            }
+        }
+
+        &__el
+        {
+            padding       : $pixels-10;
+            margin-right  : $pixels-20;
+            border-bottom : $pixels-1 dotted $color-white;
+
+            &:last-child
+            {
+                border-bottom : none;
+            }
+
+            @include for-tablet-landscape-up
+            {
+                border : none;
+            }
+        }
+
+        &__link
+        {
+            color       : $color-red;
+            font-weight : $weight-light;
+
+            @include for-tablet-landscape-up
+            {
+                color      : $color-white;
+                text-align : center;
+            }
+
+            &:visited
+            {
+                color : $color-red;
+
+                @include for-tablet-landscape-up
+                {
+                    color : $color-white;
+                }
+            }
+
+            &:hover
+            {
+                @include for-tablet-landscape-up
+                {
+                    color : $color-red;
+                }
+            }
+
+            &:active
+            {
+                color       : $color-blue;
+                font-weight : bold;
+                @include for-tablet-landscape-up
+                {
+                    font-weight : $weight-light;
+                }
+            }
+        }
+
+        .nav__btn:checked ~ .nav__list
+        {
+            display        : flex;
+            flex-direction : column;
+        }
+
+        .nav__btn:checked ~ .nav__switch span:nth-child(1)
+        {
+            transform : rotate(-30deg) translate(-7.5px, 15px) scaleX(1.18);
+        }
+
+        .nav__btn:checked ~ .nav__switch span:nth-child(2)
+        {
+            display : none;
+        }
+
+        .nav__btn:checked ~ .nav__switch span:nth-child(3)
+        {
+            transform : rotate(30deg) translate(0px, 0px) scaleX(1.18);
+        }
+
+        .nav__btn:checked
+        {
+            @include for-tablet-landscape-up
+            {
+                & ~ .nav__list
+                {
+                    flex-direction : row;
+                }
+            }
+        }
+    }
+}
