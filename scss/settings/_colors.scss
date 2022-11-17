@@ -1,9 +1,18 @@
-$color-white: #FFFFFF;
-$color-black: #000000;
-$color-green: #55DFB4;
-$color-blue: blue;
-$color-red: #FF0E0E;
-$color-light-green: #004b00;
-$color-darker-green: #399c39;
-$background-image: linear-gradient(90deg, $color-light-green, $color-darker-green);
-$color-yellow-green: yellowgreen;
+$color-white                      : #FFF;
+$color-white-dark                 : #E1D9D1;
+$color-black                      : #000;
+$color-green                      : #55DFB4;
+$color-blue                       : blue;
+$color-red                        : #FF0E0E;
+$color-pink-alpha                 : rgba(255, 99, 71, 0.5);
+$color-light-green                : #004B00;
+$color-darker-green               : #399C39;
+$color-yellow-green               : yellowgreen;
+$color-pomegranate                : #FA532E;
+$color-brown                      : #561506;
+$color-brown-rgba                 : rgba(86, 21, 6, 0.5);
+$color-pomegranate-rgba           : rgba(250, 83, 46, 0.5);
+
+$background-image-body            : linear-gradient(90deg, $color-light-green, $color-darker-green);
+$background-image-sentence-wide   : linear-gradient(0deg, $color-brown-rgba, $color-pomegranate-rgba);
+$background-image-sentence-narrow : linear-gradient(0deg, $color-brown, $color-pomegranate);
