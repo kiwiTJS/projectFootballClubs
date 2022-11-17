@@ -343,8 +343,8 @@ textarea {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #FFFFFF;
-  background-image: linear-gradient(90deg, #004b00, #399c39);
+  color: #FFF;
+  background-image: linear-gradient(90deg, #004B00, #399C39);
 }
 
 a {
@@ -357,7 +357,7 @@ a {
 }
 
 .logo {
-  color: #FFFFFF;
+  color: #FFF;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
@@ -366,8 +366,8 @@ a {
 .header {
   height: 7.5rem;
   width: 100%;
-  min-width: 300px;
-  background-color: #000000;
+  min-width: 18.75rem;
+  background-color: #000;
 }
 .header__container {
   height: inherit;
@@ -392,12 +392,12 @@ a {
 }
 .header .nav__switch {
   display: block;
-  border: 0.125rem solid #FFFFFF;
+  border: 0.125rem solid #FFF;
   padding: 0.5rem;
   border-radius: 25%;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__switch {
     display: none;
   }
@@ -412,21 +412,21 @@ a {
 .header .nav__switch span:last-child {
   margin-bottom: 0;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__switch span {
     display: flex;
   }
 }
 .header .nav__list {
   display: none;
-  background-color: yellowgreen;
+  background-color: #000;
   position: absolute;
   top: 7.5rem;
   right: 0;
   width: 100vw;
   text-align: right;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__list {
     display: flex;
     position: static;
@@ -436,15 +436,16 @@ a {
   }
 }
 .header .nav__el {
-  padding: 0.625rem;
-  margin-right: 1.25rem;
-  border-bottom: 0.0625rem dotted #FFFFFF;
+  padding: 1.25rem;
+  margin: 0 1.25rem;
+  border-bottom: 0.0625rem dotted #FFF;
 }
 .header .nav__el:last-child {
   border-bottom: none;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__el {
+    margin-left: 0;
     border: none;
   }
 }
@@ -452,21 +453,21 @@ a {
   color: #FF0E0E;
   font-weight: 300;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__link {
-    color: #FFFFFF;
+    color: #FFF;
     text-align: center;
   }
 }
 .header .nav__link:visited {
   color: #FF0E0E;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__link:visited {
-    color: #FFFFFF;
+    color: #FFF;
   }
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__link:hover {
     color: #FF0E0E;
   }
@@ -475,7 +476,7 @@ a {
   color: blue;
   font-weight: bold;
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav__link:active {
     font-weight: 300;
   }
@@ -493,9 +494,60 @@ a {
 .header .nav .nav__btn:checked ~ .nav__switch span:nth-child(3) {
   transform: rotate(30deg) translate(0px, 0px) scaleX(1.18);
 }
-@media (min-width: 63.5rem) {
+@media (min-width: 68.125rem) {
   .header .nav .nav__btn:checked ~ .nav__list {
     flex-direction: row;
+  }
+}
+
+.sentence__container {
+  min-height: calc(100vh - 7.5rem);
+  background-image: url("../img/pitch-vertical.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 68.125rem) {
+  .sentence__container {
+    background-image: url("../img/pitch-horizontal.jpg");
+    min-width: 100vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+}
+.sentence__overlay {
+  background-image: linear-gradient(0deg, #561506, #FA532E);
+}
+@media (min-width: 68.125rem) {
+  .sentence__overlay {
+    background-image: linear-gradient(0deg, rgba(86, 21, 6, 0.5), rgba(250, 83, 46, 0.5));
+    min-height: calc(100vh - 7.5rem);
+    position: relative;
+    width: 100vw;
+  }
+}
+.sentence__text {
+  font-family: "Playball", cursive;
+  font-size: 2.25rem;
+  color: #E1D9D1;
+  padding: 1.25rem 0.625rem;
+  text-align: center;
+}
+@media (min-width: 68.125rem) {
+  .sentence__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+@media (max-width: 28.75rem) {
+  .sentence__text {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 68.125rem) {
+  .sentence__text span {
+    color: red;
   }
 }
 /*# sourceMappingURL=main.css.map */

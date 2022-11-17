@@ -1,0 +1,32 @@
+*
+{
+    box-sizing : border-box;
+}
+
+body
+{
+    font-family      : $font-poppins;
+    color            : $color-white;
+    background-image : $background-image-body;
+}
+
+a
+{
+    text-decoration : none;
+}
+
+.container
+{
+    max-width : $pixels-1352;
+    margin    : 0 auto;
+}
+
+.logo
+{
+    color       : $color-white;
+    font-weight : $weight-bold;
+    font-family : $font-sans;
+    font-size   : 32px;
+}
+
+$header-height : $pixels-120;

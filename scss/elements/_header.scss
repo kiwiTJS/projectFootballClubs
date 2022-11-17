@@ -1,9 +1,8 @@
 .header
 {
-    $header-height   : $pixels-120;
     height           : $header-height;
     width            : 100%;
-    min-width        : 300px;
+    min-width        : $pixels-300;
     background-color : $color-black;
 
     &__container
@@ -45,7 +44,7 @@
             padding       : $pixels-8;
             border-radius : 25%;
 
-            min-height    : 60px;
+            min-height    : $pixels-60;
             @include for-tablet-landscape-up
             {
                 display : none;
@@ -74,7 +73,7 @@
         &__list
         {
             display          : none;
-            background-color : $color-yellow-green;
+            background-color : $color-black;
             position         : absolute;
             top              : $header-height;
             right            : 0;
@@ -93,8 +92,8 @@
 
         &__el
         {
-            padding       : $pixels-10;
-            margin-right  : $pixels-20;
+            padding       : $pixels-20;
+            margin        : 0 $pixels-20;
             border-bottom : $pixels-1 dotted $color-white;
 
             &:last-child
@@ -104,7 +103,8 @@
 
             @include for-tablet-landscape-up
             {
-                border : none;
+                margin-left : 0;
+                border      : none;
             }
         }
 

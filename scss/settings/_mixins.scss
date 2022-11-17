@@ -1,3 +1,7 @@
 @mixin for-tablet-landscape-up {
-    @media (min-width: $pixels-1016) { @content; }
+    @media (min-width: $pixels-1090) { @content; }
+}
+
+@mixin for-mini-device {
+    @media (max-width: $pixels-460) { @content; }
 }

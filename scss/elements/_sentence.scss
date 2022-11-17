@@ -1,0 +1,61 @@
+.sentence
+{
+    &__container
+    {
+        //min-width: 100vw;
+        min-height          : calc(100vh - $header-height);
+        background-image    : url('../img/pitch-vertical.jpeg');
+        background-size     : cover;
+        background-position : center;
+        @include for-tablet-landscape-up
+        {
+            background-image : url('../img/pitch-horizontal.jpg');
+            min-width        : 100vw;
+            display          : flex;
+            justify-content  : start;
+            align-items      : center;
+        }
+    }
+
+    &__overlay
+    {
+        background-image : $background-image-sentence-narrow;
+
+        @include for-tablet-landscape-up
+        {
+            background-image : $background-image-sentence-wide;
+            min-height       : calc(100vh - $header-height);
+            position         : relative;
+            width            : 100vw;
+        }
+    }
+
+    &__text
+    {
+        font-family : $font-playball;
+        font-size   : $pixels-36;
+        color       : $color-white-dark;
+        padding     : $pixels-20 $pixels-10;
+        text-align  : center;
+
+        @include for-tablet-landscape-up
+        {
+            position : absolute;
+            top      : 50%;
+            left     : 50%;
+        }
+
+        @include for-mini-device
+        {
+            font-size : $pixels-18;
+        }
+
+        span
+        {
+            @include for-tablet-landscape-up
+            {
+                color : red;
+            }
+        }
+    }
+}
