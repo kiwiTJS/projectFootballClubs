@@ -2,7 +2,6 @@
 {
     height           : $header-height;
     width            : 100%;
-    min-width        : $pixels-300;
     background-color : $color-black;
 
     &__container
@@ -23,6 +22,11 @@
         span
         {
             color : $color-red;
+        }
+
+        @include for-mini-device
+        {
+            font-size : $pixels-18;
         }
     }
 
@@ -50,6 +54,16 @@
                 display : none;
             }
 
+            @include for-mini-device
+            {
+                border        : $pixels-1 solid $color-white;
+                padding       : $pixels-4;
+                border-radius : 25%;
+
+                min-height    : $pixels-30;
+
+            }
+
             span
             {
                 display          : block;
@@ -67,6 +81,14 @@
                 {
                     display : flex;
                 }
+
+                @include for-mini-device
+                {
+                    height        : $pixels-4;
+                    width         : $pixels-32;
+                    margin-bottom : $pixels-4;
+                }
+
             }
         }
 
@@ -157,6 +179,11 @@
         .nav__btn:checked ~ .nav__switch span:nth-child(1)
         {
             transform : rotate(-30deg) translate(-7.5px, 15px) scaleX(1.18);
+
+            @include for-mini-device
+            {
+                transform : rotate(-30deg) translate(-4.5px, 7.5px) scaleX(1.18);
+            }
         }
 
         .nav__btn:checked ~ .nav__switch span:nth-child(2)

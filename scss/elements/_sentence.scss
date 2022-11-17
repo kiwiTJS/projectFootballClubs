@@ -2,8 +2,8 @@
 {
     &__container
     {
-        //min-width: 100vw;
-        min-height          : calc(100vh - $header-height);
+
+        min-height          : calc(100vh - $header-height - $pixels-8);
         background-image    : url('../img/pitch-vertical.jpeg');
         background-size     : cover;
         background-position : center;
@@ -43,6 +43,7 @@
             position : absolute;
             top      : 50%;
             left     : 50%;
+            padding: $pixels-0 $pixels-20;
         }
 
         @include for-mini-device
