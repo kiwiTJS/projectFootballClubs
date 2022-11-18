@@ -358,7 +358,7 @@ a {
 
 .logo {
   color: #FFF;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
 }
@@ -525,7 +525,7 @@ a {
 }
 
 .sentence__container {
-  min-height: calc(100vh - 7.5rem - 0.5rem);
+  min-height: calc(100vh - 7.5rem);
   background-image: url("../img/pitch-vertical.jpeg");
   background-size: cover;
   background-position: center;
@@ -574,5 +574,76 @@ a {
   .sentence__text span {
     color: red;
   }
+}
+
+.contact__title {
+  margin: 0 auto;
+  padding: 5vh 10vw 2vh;
+  max-width: 600px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 68.125rem) {
+  .contact__title {
+    padding: 0;
+    margin: 20px auto;
+  }
+}
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+}
+@media (min-width: 68.125rem) {
+  .contact .form {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.contact .form__user-data {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 68.125rem) {
+  .contact .form__user-data {
+    width: 50%;
+    padding: 36px;
+  }
+}
+.contact .form__data-details {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 68.125rem) {
+  .contact .form__data-details {
+    width: 50%;
+    padding: 36px;
+  }
+}
+.contact .form__label {
+  font-weight: 300;
+  margin: 0 0 5px 6px;
+  font-family: inherit;
+}
+.contact .form input, .contact .form textarea, .contact .form select {
+  padding: 10px;
+  margin-bottom: 12px;
+  font-family: inherit;
+  font-size: inherit;
+}
+.contact .form input::-moz-placeholder, .contact .form textarea::-moz-placeholder, .contact .form select::-moz-placeholder {
+  font-size: inherit;
+}
+.contact .form input::placeholder, .contact .form textarea::placeholder, .contact .form select::placeholder {
+  font-size: inherit;
+}
+.contact .form select option {
+  background-color: yellowgreen;
+  color: inherit;
 }
 /*# sourceMappingURL=main.css.map */

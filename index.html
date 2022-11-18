@@ -24,7 +24,7 @@
                 rel = 'preconnect'
         >
         <link
-                href = 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&family=Playball&family=Poppins:wght@300;400;500;700;800&display=swap'
+                href = 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Playball&family=Poppins:wght@300;400;500;700&display=swap'
                 rel = 'stylesheet'
         >
         <title > Project: Football Clubs</title >
@@ -77,10 +77,85 @@
             <div class = 'container sentence__container'>
                 <div class = 'sentence__overlay'>
                     <h1 class = 'sentence__text'>Moim celem jest odnalezienie dla Ciebie idealnego klubu, którym poprowadzisz najbardziej niezapomnianą karierę w grze
-                        <span>Project:</span> Football
+                        <span >Project:</span > Football
                                                  Clubs</h1 >
                 </div >
             </div >
         </section ><!--e:sentence -->
+        <main >
+
+        </main ><!--e:main.tool -->
+        <section class = 'contact' id='contact'>
+            <div class = 'contact__container container'>
+
+                <h2 class = 'contact__title'>Chcesz zgłosić błąd, wnieść poprawki dotyczące klubów w naszej bazie danych albo zaproponować nową funkcję na stronie? Skontaktuj
+                                             się z nami!</h2 >
+                <form class = 'form'>
+                    <div class = 'form__user-data'>
+                        <label
+                                class = 'form__label'
+                                for = 'name'
+                        >Imię:</label >
+                        <input
+                                id = 'name'
+                                placeholder = 'Wprowadź twoje imię...'
+                                type = 'text'
+                        >
+                        <label
+                                class = 'form__label'
+                                for = 'surname'
+                        >Nazwisko:</label >
+                        <input
+                                id = 'surname'
+                                placeholder = 'Wprowadź twoje nazwisko...'
+                                type = 'text'
+                        >
+                        <label
+                                class = 'form__label'
+                                for = 'email'
+                        >Adres e-mail:</label >
+                        <input
+                                id = 'email'
+                                placeholder = 'Wprowadź twój adres e-mail...'
+                                type = 'email'
+                        >
+                    </div >
+                    <div class = 'form__data-details'>
+                        <label
+                                class = 'form__label'
+                                for = 'contact-type'
+                        >Rodzaj zgłoszenia:</label >
+                        <select
+                                id = 'contact-type'
+                                name = 'contact-type'
+                        >
+                            <option
+                                    selected
+                                    value = 'none'
+                            >---------
+                            </option >
+                            <option value = 'error'>błąd na stronie</option >
+                            <option value = 'base'>zmiany w bazie danych</option >
+                            <option value = 'feature'>propozycja nowej funkcji</option >
+                            <option value = 'other'>inna sprawa</option >
+                        </select >
+
+                        <label
+                                class = 'form__label'
+                                for = 'form_message'
+                        >Twoja wiadomość:</label >
+                        <textarea
+                                class = 'form__message'
+                                id = 'form_message'
+                                placeholder = 'Wpisz wiadomość...'
+                                rows = '10'
+                        ></textarea >
+                        <button type = 'submit'>Wyślij</button >
+                    </div >
+
+                </form >
+
+            </div >
+        </section >
     </body >
 </html >
