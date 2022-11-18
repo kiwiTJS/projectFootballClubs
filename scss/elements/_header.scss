@@ -24,7 +24,7 @@
             color : $color-red;
         }
 
-        @include for-mini-device
+        @include for-mini-devices
         {
             font-size : $pixels-18;
         }
@@ -49,12 +49,12 @@
             border-radius : 25%;
 
             min-height    : $pixels-60;
-            @include for-tablet-landscape-up
+            @include for-wider-devices
             {
                 display : none;
             }
 
-            @include for-mini-device
+            @include for-mini-devices
             {
                 border        : $pixels-1 solid $color-white;
                 padding       : $pixels-4;
@@ -77,12 +77,12 @@
                     margin-bottom : 0;
                 }
 
-                @include for-tablet-landscape-up
+                @include for-wider-devices
                 {
                     display : flex;
                 }
 
-                @include for-mini-device
+                @include for-mini-devices
                 {
                     height        : $pixels-4;
                     width         : $pixels-32;
@@ -102,7 +102,7 @@
             width            : 100vw;
             text-align       : right;
 
-            @include for-tablet-landscape-up
+            @include for-wider-devices
             {
                 display          : flex;
                 position         : static;
@@ -123,7 +123,7 @@
                 border-bottom : none;
             }
 
-            @include for-tablet-landscape-up
+            @include for-wider-devices
             {
                 margin-left : 0;
                 border      : none;
@@ -135,7 +135,7 @@
             color       : $color-red;
             font-weight : $weight-light;
 
-            @include for-tablet-landscape-up
+            @include for-wider-devices
             {
                 color      : $color-white;
                 text-align : center;
@@ -145,7 +145,7 @@
             {
                 color : $color-red;
 
-                @include for-tablet-landscape-up
+                @include for-wider-devices
                 {
                     color : $color-white;
                 }
@@ -153,7 +153,7 @@
 
             &:hover
             {
-                @include for-tablet-landscape-up
+                @include for-wider-devices
                 {
                     color : $color-red;
                 }
@@ -163,7 +163,7 @@
             {
                 color       : $color-blue;
                 font-weight : bold;
-                @include for-tablet-landscape-up
+                @include for-wider-devices
                 {
                     font-weight : $weight-light;
                 }
@@ -180,7 +180,7 @@
         {
             transform : rotate(-30deg) translate(-7.5px, 15px) scaleX(1.18);
 
-            @include for-mini-device
+            @include for-mini-devices
             {
                 transform : rotate(-30deg) translate(-4.5px, 7.5px) scaleX(1.18);
             }
@@ -198,7 +198,7 @@
 
         .nav__btn:checked
         {
-            @include for-tablet-landscape-up
+            @include for-wider-devices
             {
                 & ~ .nav__list
                 {

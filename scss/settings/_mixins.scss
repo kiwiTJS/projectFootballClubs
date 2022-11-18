@@ -1,7 +1,11 @@
-@mixin for-tablet-landscape-up {
-    @media (min-width: $pixels-1090) { @content; }
+@mixin for-wider-devices
+{
+    @media (min-width : $pixels-1090)
+    { @content; }
 }
 
-@mixin for-mini-device {
-    @media (max-width: $pixels-460) { @content; }
+@mixin for-mini-devices
+{
+    @media (max-width : $pixels-460)
+    { @content; }
 }
