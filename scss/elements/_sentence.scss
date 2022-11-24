@@ -42,7 +42,7 @@
             position : absolute;
             top      : 50%;
             left     : 50%;
-            padding: $pixels-0 $pixels-20;
+            padding  : $pixels-0 $pixels-20;
         }
 
         @include for-mini-devices

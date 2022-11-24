@@ -12,8 +12,8 @@
         //font-weight:
         @include for-wider-devices
         {
-            padding     : 0;
-            margin      : 20px auto;
+            padding : 0;
+            margin  : 20px auto;
 
         }
     }
@@ -65,7 +65,7 @@
 
         &__label
         {
-            font-weight: $weight-light;
+            font-weight : $weight-light;
             margin      : 0 0 5px 6px;
             font-family : inherit;
         }
