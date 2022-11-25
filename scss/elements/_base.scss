@@ -13,6 +13,13 @@ body
 a
 {
     text-decoration : none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: white;
+    }
 }
 
 .container
@@ -26,7 +33,12 @@ a
     color       : $color-white;
     font-weight : $weight-bold;
     font-family : $font-sans;
-    font-size   : 32px;
+    font-size   : $pixels-32;
 }
 
 $header-height : $pixels-120;
+
+.hidden
+{
+    display : none;
+}

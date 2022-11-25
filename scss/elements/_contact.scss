@@ -5,15 +5,16 @@
     {
         margin      : 0 auto;
         padding     : 5vh 10vw 2vh;
-        max-width   : 600px;
+        max-width   : $pixels-600;
         text-align  : center;
-        font-size   : 24px;
+        font-size   : $pixels-24;
         font-family : $font-form;
+        line-height: $pixels-32;
         //font-weight:
         @include for-wider-devices
         {
             padding : 0;
-            margin  : 20px auto;
+            margin  : $pixels-20 auto;
 
         }
     }
@@ -22,9 +23,9 @@
     {
         display        : flex;
         flex-direction : column;
-        margin         : 0 10px;
+        margin         : 0 $pixels-10;
         font-family    : $font-form;
-        font-size      : 24px;
+        font-size      : $pixels-24;
 
         //background-color: pink;
 
@@ -45,7 +46,7 @@
             @include for-wider-devices
             {
                 width   : 50%;
-                padding : 36px;
+                padding : $pixels-36;
             }
 
         }
@@ -58,7 +59,7 @@
             @include for-wider-devices
             {
                 width   : 50%;
-                padding : 36px;
+                padding : $pixels-36;
 
             }
         }
@@ -66,14 +67,14 @@
         &__label
         {
             font-weight : $weight-light;
-            margin      : 0 0 5px 6px;
+            margin      : 0 0 $pixels-5 $pixels-6;
             font-family : inherit;
         }
 
         input, textarea, select
         {
-            padding       : 10px;
-            margin-bottom : 12px;
+            padding       : $pixels-10;
+            margin-bottom : $pixels-12;
 
             font-family   : inherit;
             font-size     : inherit;

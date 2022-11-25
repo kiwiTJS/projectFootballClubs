@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function()
 {
-
     const Clubs = [
         {
             'ordinal_number': 1,
@@ -7005,31 +7004,368 @@ document.addEventListener('DOMContentLoaded', function()
             'second_color': '#e7a04c'
         }
     ];
+    const appStates = [
+        'start',
+        'chooseFlag',
+        'chooseNumber',
+        'showResults',
+        'resultAndChooseFlag',
+        'resultAndChooseNumber'
+    ];
 
+    function swapNamePLtoENG (element)
+    {
+        switch (element)
+        {
+            case 'Polska':
+                return 'poland';
+            case 'Niemcy':
+                return 'germany';
 
+            case 'Anglia':
+                return 'england';
 
+            case 'Brazylia':
+                return 'brazil';
 
+            case 'Portugalia':
+                return 'portugal';
 
+            case 'Włochy':
+                return 'italy';
+            case 'Holandia':
+                return 'netherland';
 
+            default:
+                console.log(`Some bug with swapName`);
+        }
 
+    }
 
+    function swapNameENGtoPL (element)
+    {
+        switch (element)
+        {
+            case 'poland':
+                return 'Polska';
 
+            case 'germany':
+                return 'Niemcy';
 
+            case 'england':
+                return 'Anglia';
 
+            case 'brazil':
+                return 'Brazylia';
 
+            case 'portugal':
+                return 'Portugalia';
 
+            case 'italy':
+                return 'Włochy';
 
+            case 'netherland':
+                return 'Holandia';
+                
+            default:
+                console.log(`Some bug with swapName`);
+        }
 
+    }
 
+    function getUniqueValues (array, column)
+    {
+        const uniqueValues = [];
+        for (let i = 0; i < array.length; i++)
+        {
+            if ( !uniqueValues.includes(array[i][column]))
+            {
+                uniqueValues.push(array[i][column]);
+            }
+            uniqueValues.sort();
+        }
+        currentCountries = uniqueValues;
+        return uniqueValues;
+    }
 
+    function getUniqueValues2 (array, country, column1, column2, column3)
+    {
+        currentCountry = country;
+        let leagueNames = [];
+        let leagueTiers = [];
 
+        for (let i = 0; i < array.length; i++)
+        {
+            if (array[i][column1] === country)
+            {
+                if ( !leagueNames.includes(array[i][column2]))
+                {
+                    leagueNames.push(array[i][column2]);
+                    leagueTiers.push(array[i][column3]);
+                }
+                // uniqueValues.sort();
+            }
+        }
+        currentLeagues = leagueNames;
+        currentLeagueTiers = leagueTiers;
+        return leagueNames;
 
+    }
 
+    function addCountriesToDOM (countries)
+    {
+        //create element type country, adding to DOM to countriesList
+        for (let i = 0; i < countries.length; i++)
+        {
+            //create template for country element
+            let countryElement = document.createElement('div');
+            let countryElementName = document.createElement('p');
+            let countryElementFlag = document.createElement('div');
 
+            //swap Polish to English name
+            let flagNameENG = swapNamePLtoENG(countries[i]);
 
+            //adding classes for elements
+            countryElement.className = 'tool__country';
+            countryElementFlag.classList.add(`tool__country-flag`, `flag-${flagNameENG}`);
+            countryElementName.className = 'tool__country-name';
+            //adding name of country to paragraph
+            countryElementName.textContent = countries[i];
 
+            //adding finished elements to div
+            countryElement.append(countryElementFlag, countryElementName);
 
+            //adding country from base do DOM element (.countriesList element)
+            countriesList.appendChild(countryElement);
+        }
 
+    }
 
+    function showCurrentAppState (number)
+    {
+        console.log(`Obecny stan aplikacji: ` + appStates[number]);
+    }
 
+    function displayCurrentState (number)
+    {
+        console.log(appState);
+        switch (number)
+        {
+            case 0 :
+            {
+                displayStartSection();
+                break;
+            }
+            case 1 :
+            {
+                displayCountriesSection();
+                break;
+            }
+            case 2 :
+            {
+                displayLeaguesSection();
+                appState = 2;
+                break;
+            }
+            case 3 :
+            {
+                displayResultsSection();
+                appState = 3;
+                break;
+            }
+            case 4 :
+            {
+                console.log('x');
+                break;
+            }
+            case 5 :
+            {
+                console.log('x');
+                break;
+            }
+            default :
+            {
+                console.log('x');
+                break;
+            }
+
+        }
+    }
+
+    function displayPreviousSection ()
+    {
+        appState--;
+        displayCurrentState(appState);
+
+        let toDeleteLeague = document.querySelectorAll('.tool__league');
+
+        // for (let i = 0; i < toDeleteLeague.length-1; i++)
+        // {
+        //     toDeleteLeague[i].parentElement.remove(toDeleteLeague[i]);
+        // }
+        // leaguesList.removeChild(leagueElement);
+        // leagueElement
+        //TODO reset currentCountry
+        //TODO remove elements in tool-leagues-list
+    }
+
+    function displayStartSection ()
+    {
+        appState = 0;
+        startSection.classList.remove('hidden');
+        countrySection.classList.add('hidden');
+        leagueSection.classList.add('hidden');
+        resultSection.classList.add('hidden');
+    }
+
+    function displayCountriesSection ()
+    {
+        appState = 1;
+        startSection.classList.add('hidden');
+        countrySection.classList.remove('hidden');
+        leagueSection.classList.add('hidden');
+        resultSection.classList.add('hidden');
+    }
+
+    function displayLeaguesSection ()
+    {
+        appState = 2;
+        startSection.classList.add('hidden');
+        countrySection.classList.add('hidden');
+        leagueSection.classList.remove('hidden');
+        resultSection.classList.add('hidden');
+
+    }
+
+    function displayResultsSection ()
+    {
+        appState = 3;
+        startSection.classList.add('hidden');
+        countrySection.classList.add('hidden');
+        leagueSection.classList.add('hidden');
+        resultSection.classList.remove('hidden');
+    }
+
+    function displayResultAndChooseCountry ()
+    {
+        appState = 4;
+        startSection.classList.add('hidden');
+        countrySection.classList.remove('hidden');
+        leagueSection.classList.add('hidden');
+        resultSection.classList.remove('hidden');
+    }
+
+    function displayResultAndChooseLeague ()
+    {
+        appState = 5;
+        startSection.classList.remove('hidden');
+        countrySection.classList.add('hidden');
+        leagueSection.classList.add('hidden');
+        resultSection.classList.remove('hidden');
+    }
+
+    // function showFlags ()
+    // {
+    //
+    // }
+
+//POCZĄTEK DZIAŁANIA PROGRAMU
+
+    let tool = document.querySelector('#tool');
+    let toolSections = tool.querySelectorAll('#tool > div > section');
+
+    //section in html
+    let startSection = tool.querySelector('#start');
+    let countrySection = tool.querySelector('#countries');
+    let leagueSection = tool.querySelector('#leagues');
+    let resultSection = tool.querySelector('#results');
+
+    //buttons in HTML
+    let backButton = tool.querySelectorAll('.btn-back');
+    let startButton = tool.querySelector('.btn-start');
+    // let backToTopButton = document.querySelector('.btn-backToTop');
+
+    //empty lists of countries and leagues
+    let countriesList = document.querySelector('.tool__countries-list');
+    let leaguesList = document.querySelector('.tool__leagues-list');
+    let currentCountries = [];
+    let currentLeagues = [];
+    let currentLeagueTiers = [];
+    let appState = 0;
+
+    let currentCountry;
+    let currentLeague;
+    displayCurrentState(appState);
+
+    startButton.addEventListener('click', addCountriesToDOM(getUniqueValues(Clubs, 'country')));
+    startButton.addEventListener('click', displayCountriesSection);
+
+//testowo
+//         currentCountry = 'Anglia';
+
+    // let leagues = getUniqueValues2(Clubs, currentCountry, 'country', 'league_name');
+
+    let countryButtons = document.querySelectorAll('.tool__country');
+
+//zapytać jak wyciągnąć to z pętli:
+    for (let i = 0; i < backButton.length; i++)
+    {
+        backButton[i].addEventListener('click', displayPreviousSection);
+
+    }
+
+    function addLeaguesToDOM (leagues)
+    {
+        //create element type league, adding to DOM to leaguesList
+        for (let i = 0; i < leagues.length; i++)
+        {
+            //create template for league element
+            let leagueElement = document.createElement('div');
+            let leagueElementName = document.createElement('p');
+            let leagueElementNumber = document.createElement('p');
+            let leagueElementFlag = document.createElement('div');
+
+            let flagNameENG = swapNamePLtoENG(currentCountry);
+
+            //adding classes for elements
+            leagueElement.className = 'tool__league';
+            leagueElementName.className = 'tool__league-name';
+            leagueElementNumber.className = 'tool__league-number';
+            leagueElementFlag.classList.add(`tool__league-flag`, `flag-${flagNameENG}`);
+            //adding name of league to paragraph
+            leagueElementName.textContent = leagues[i];
+            leagueElementNumber.textContent = currentLeagueTiers[i];
+
+            //adding finished elements to div
+            leagueElement.append(leagueElementFlag, leagueElementNumber, leagueElementName);
+
+            //adding league from base do DOM element (.leaguesList element)
+            leaguesList.appendChild(leagueElement);
+
+        }
+
+    }
+
+    function changeCurrentCountry ()
+    {
+        currentCountry = this.lastElementChild.textContent;
+        getUniqueValues2(Clubs, currentCountry, 'country', 'league_name', 'league_tier');
+        console.log(currentLeagues);
+        console.log(currentLeagueTiers);
+        addLeaguesToDOM(currentLeagues);
+    }
+
+    for (let i = 0; i < countryButtons.length; i++)
+    {
+        countryButtons[i].addEventListener('click', changeCurrentCountry);
+        countryButtons[i].addEventListener('click', displayLeaguesSection);
+    }
+
+    // function showClubs ()
+    // {
+    //     let toolLeague = document.querySelectorAll('.toolLeague');
+    //     console.log(toolLeague);
+    //     console.log('OK');
+    // }
 });
+

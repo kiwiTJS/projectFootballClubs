@@ -1,0 +1,140 @@
+.tool
+{
+    background-color : $color-brown;
+
+    &__container
+    {
+        padding : 20px 0;
+    }
+
+    &__title
+    {
+        text-align  : center;
+        color       : $color-white-dark;
+        font-size   : 20px;
+        font-weight : $weight-bold;
+        padding     : 0 16px;
+    }
+
+    &__start
+    {
+        max-width : 100%;
+    }
+
+
+
+    &__countries-card,
+    &__leagues-card
+    {
+        margin      : 0 16px;
+        padding-top : 10px;
+
+    }
+
+    &__countries-command,
+    &__leagues-command
+    {
+        margin-top : 20px;
+        text-align : center;
+        padding    : 0 16px;
+    }
+
+    &__countries-list,
+    &__leagues-list
+    {
+        background-color : grey;
+        margin           : 20px 16px 0;
+
+        display          : flex;
+        justify-content  : center;
+        align-items      : center;
+        flex-wrap        : wrap;
+        padding-bottom   : 16px;
+        border-radius    : 16px;
+        //min-width: 1400px;
+    }
+
+    &__country,
+    &__league
+    {
+        min-width      : 140px;
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        padding-top    : 16px;
+        margin         : 16px 16px 0;
+        border         : 1px solid red;
+        border-radius  : 16px;
+
+    }
+
+    &__league {
+        min-height: 220px;
+    }
+
+    &__country-name,
+    &__league-name,
+    &__league-number,
+    {
+        text-transform : uppercase;
+        padding        : 16px;
+        max-width: 140px;
+        text-align: center;
+    }
+
+    &__league-number {
+        font-size: 40px;
+    }
+
+    &__country-flag,
+    &__league-flag
+    {
+        width  : $pixels-80;
+        height : $pixels-60;
+
+    }
+
+    &__leagues
+    {
+        height           : 200px;
+        width            : 90%;
+        background-color : red;
+
+    }
+
+    .flag-poland
+    {
+        background-image : url('../img/flag-poland.png');
+    }
+
+    .flag-portugal
+    {
+        background-image : url('../img/flag-portugal.png');
+    }
+
+    .flag-germany
+    {
+        background-image : url('../img/flag-germany.png');
+    }
+
+    .flag-brazil
+    {
+        background-image : url('../img/flag-brazil.png');
+    }
+
+    .flag-italy
+    {
+        background-image : url('../img/flag-italy.png');
+    }
+
+    .flag-england
+    {
+        background-image : url('../img/flag-england.png');
+    }
+
+    .flag-netherland
+    {
+        background-image : url('../img/flag-netherland.png');
+    }
+
+}

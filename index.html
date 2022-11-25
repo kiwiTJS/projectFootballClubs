@@ -29,7 +29,10 @@
         >
         <title > Project: Football Clubs</title >
     </head >
-    <body class = 'body'>
+    <body
+            class = 'body'
+            id = 'top'
+    >
         <header class = 'header'>
             <div class = 'container header__container'>
                 <a class = 'logo'><span >project:</span > football clubs</a >
@@ -82,7 +85,55 @@
                 </div >
             </div >
         </section ><!--e:sentence -->
-        <main >
+        <main
+                class = 'tool'
+                id = 'tool'
+        >
+            <div class = 'tool__container container'>
+                <h2 class = 'tool__title'>W tym miejscu znajdziesz odpowiedni klub dla siebie!</h2 >
+                <section
+                        class = 'tool__start'
+                        id = 'start'
+                >
+                    <a
+                            class = 'btn-start btn'
+                    >OK! Zaczynam poszukiwania!</a >
+                </section >
+                <section
+                        class = 'tool__countries-card'
+                        id = 'countries'
+                >
+                    <p class = 'tool__countries-command'>Najpierw wybierz kraj, w którym chcesz poprowadzić rozgrywki!</p >
+                    <div class = 'tool__countries-list'>
+                    </div >
+                    <div class = 'tool_back'>
+                        <a
+                                class = 'btn-back btn'
+                        >Cofnij</a >
+                    </div >
+                </section ><!--e:countries -->
+                <section
+                        class = 'tool__leagues-card'
+                        id = 'leagues'
+                >
+                    <p class = 'tool__leagues-command'>Teraz wybierz poziom ligowy, na którym chcesz zacząć karierę!</p >
+                    <div class = 'tool__leagues-list'>
+                    </div >
+                    <div class = 'tool_back'>
+                        <a
+                                class = 'btn-back btn'
+                        >Cofnij</a >
+                    </div >
+                </section ><!--e:leagues -->
+                <section
+                        class = 'tool__results'
+                        id = 'results'
+                >
+
+                </section ><!--e:results -->
+
+            </div >
+
         </main ><!--e:main.tool -->
         <section
                 class = 'contact'
@@ -160,8 +211,10 @@
             </div >
         </section ><!--         e:contact -->
 
+        <a
+                class = 'btn-backToTop btn '
+                href = '#top'
+        >Wróć na początek strony</a >
         <script src = 'js/app.js'></script >
-
-
     </body >
 </html >

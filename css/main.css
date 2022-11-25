@@ -350,6 +350,9 @@ body {
 a {
   text-decoration: none;
 }
+a:link, a:visited, a:hover, a:active {
+  color: white;
+}
 
 .container {
   max-width: 84.5rem;
@@ -360,7 +363,40 @@ a {
   color: #FFF;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  max-width: 160px;
+  text-align: center;
+  margin: 16px auto;
+  display: block;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.btn-start {
+  background-color: green;
+}
+
+.btn-back {
+  background-color: red;
+}
+
+.btn-backToTop {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  background-color: saddlebrown;
+  font-size: 10px;
+  max-width: 100px;
+  padding: 10px 5px;
+  border: 1px solid black;
+  margin: 4px;
 }
 
 .header {
@@ -540,7 +576,7 @@ a {
   }
 }
 .sentence__overlay {
-  background-image: linear-gradient(0deg, #561506, #FA532E);
+  background-image: linear-gradient(0deg, saddlebrown, #FA532E);
 }
 @media (min-width: 68.125rem) {
   .sentence__overlay {
@@ -576,26 +612,115 @@ a {
   }
 }
 
+.tool {
+  background-color: saddlebrown;
+}
+.tool__container {
+  padding: 20px 0;
+}
+.tool__title {
+  text-align: center;
+  color: #E1D9D1;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 16px;
+}
+.tool__start {
+  max-width: 100%;
+}
+.tool__countries-card, .tool__leagues-card {
+  margin: 0 16px;
+  padding-top: 10px;
+}
+.tool__countries-command, .tool__leagues-command {
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 16px;
+}
+.tool__countries-list, .tool__leagues-list {
+  background-color: grey;
+  margin: 20px 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-radius: 16px;
+}
+.tool__country, .tool__league {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  margin: 16px 16px 0;
+  border: 1px solid red;
+  border-radius: 16px;
+}
+.tool__league {
+  min-height: 220px;
+}
+.tool__country-name, .tool__league-name, .tool__league-number {
+  text-transform: uppercase;
+  padding: 16px;
+  max-width: 140px;
+  text-align: center;
+}
+.tool__league-number {
+  font-size: 40px;
+}
+.tool__country-flag, .tool__league-flag {
+  width: 5rem;
+  height: 3.75rem;
+}
+.tool__leagues {
+  height: 200px;
+  width: 90%;
+  background-color: red;
+}
+.tool .flag-poland {
+  background-image: url("../img/flag-poland.png");
+}
+.tool .flag-portugal {
+  background-image: url("../img/flag-portugal.png");
+}
+.tool .flag-germany {
+  background-image: url("../img/flag-germany.png");
+}
+.tool .flag-brazil {
+  background-image: url("../img/flag-brazil.png");
+}
+.tool .flag-italy {
+  background-image: url("../img/flag-italy.png");
+}
+.tool .flag-england {
+  background-image: url("../img/flag-england.png");
+}
+.tool .flag-netherland {
+  background-image: url("../img/flag-netherland.png");
+}
+
 .contact__title {
   margin: 0 auto;
   padding: 5vh 10vw 2vh;
-  max-width: 600px;
+  max-width: 37.5rem;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Open Sans", sans-serif;
+  line-height: 2rem;
 }
 @media (min-width: 68.125rem) {
   .contact__title {
     padding: 0;
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
 }
 .contact .form {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  margin: 0 0.625rem;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 @media (min-width: 68.125rem) {
   .contact .form {
@@ -612,7 +737,7 @@ a {
 @media (min-width: 68.125rem) {
   .contact .form__user-data {
     width: 50%;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 .contact .form__data-details {
@@ -622,17 +747,17 @@ a {
 @media (min-width: 68.125rem) {
   .contact .form__data-details {
     width: 50%;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 .contact .form__label {
   font-weight: 300;
-  margin: 0 0 5px 6px;
+  margin: 0 0 0.3125rem 0.375rem;
   font-family: inherit;
 }
 .contact .form input, .contact .form textarea, .contact .form select {
-  padding: 10px;
-  margin-bottom: 12px;
+  padding: 0.625rem;
+  margin-bottom: 0.75rem;
   font-family: inherit;
   font-size: inherit;
 }

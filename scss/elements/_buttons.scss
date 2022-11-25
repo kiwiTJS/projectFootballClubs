@@ -1,0 +1,32 @@
+.btn
+{
+    max-width     : 160px;
+    text-align    : center;
+    margin        : 16px auto;
+    display       : block;
+    padding       : 16px;
+    border-radius : 16px;
+}
+
+.btn-start
+{
+    background-color : green;
+}
+
+.btn-back
+{
+    background-color : red;
+}
+
+.btn-backToTop
+{
+    position         : fixed;
+    bottom           : 2px;
+    right            : 2px;
+    background-color : saddlebrown;
+    font-size: 10px;
+    max-width: 100px;
+    padding: 10px 5px;
+    border: 1px solid black;
+    margin: 4px;
+}

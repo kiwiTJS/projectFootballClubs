@@ -12,7 +12,8 @@ $color-pomegranate                : #FA532E;
 $color-brown                      : #561506;
 $color-brown-rgba                 : rgba(86, 21, 6, 0.5);
 $color-pomegranate-rgba           : rgba(250, 83, 46, 0.5);
-
+$color-brown                      : saddlebrown;
+$color-grey-half                  : rgba(192, 192, 192, 0.5);
 $background-image-body            : linear-gradient(90deg, $color-light-green, $color-darker-green);
 $background-image-sentence-wide   : linear-gradient(0deg, $color-brown-rgba, $color-pomegranate-rgba);
 $background-image-sentence-narrow : linear-gradient(0deg, $color-brown, $color-pomegranate);
